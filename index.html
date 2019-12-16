@@ -7,11 +7,10 @@
      <meta http-equiv="X-UA-Compatible" content="ie=edge">
      <title>React Custom Image Loader Demo</title>
      <link rel="stylesheet" href="./styles.css" />
-     <!-- Compiled and minified CSS -->
      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
-
-     <!-- Compiled and minified JavaScript -->
+     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
      <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 
 </head>
 
@@ -19,8 +18,24 @@
      <nav>
           <div class="nav-wrapper">
                <a href="#" class="brand-logo center">React Custom Image Loader</a>
+               <ul id="nav-mobile" class="right hide-on-med-and-down">
+                    <!-- <li>
+                         <img src="http://i.stack.imgur.com/SBv4T.gif" alt="this slowpoke moves" width=80 />
+                    </li> -->
+                    <li>
+                         <a href="sass.html"><a class="btn-floating pulse btn modal-trigger" href="#modal1"><i
+                                        class="material-icons">error_outline</i></a>
+                         </a>
+                    </li>
+               </ul>
           </div>
      </nav>
+     <!-- <div style="position: relative;">
+          <div style="position: absolute; top: 3px; right: 5px;">
+               <img src="https://media1.giphy.com/media/Oq1zCyNdatYbe/giphy.gif?cid=790b76112591ffefeab0ab0df39986a082cde4f93eec38a5&rid=giphy.gif"
+                    style="border-radius: 10%;" width="65px"/>
+          </div>
+     </div> -->
      <div class="container">
           <table class="highlight">
                <thead>
@@ -33,7 +48,8 @@
                <tbody>
                     <tr>
                          <td>evaporate</td>
-                         <td><img src='https://image.flaticon.com/icons/png/512/1499/1499840.png'style="animation: evaporate 2s infinite linear;" /></td>
+                         <td><img src='https://image.flaticon.com/icons/png/512/1499/1499840.png'
+                                   style="animation: evaporate 2s infinite linear;" /></td>
                     </tr>
                     <tr>
                          <td>spin</td>
@@ -42,32 +58,160 @@
                     </tr>
                     <tr>
                          <td>flash</td>
-                         <td><img src='https://image.flaticon.com/icons/png/512/1499/1499840.png' style="animation: flash 2s infinite linear;"/></td>
+                         <td><img src='https://image.flaticon.com/icons/png/512/1499/1499840.png'
+                                   style="animation: flash 2s infinite linear;" /></td>
                     </tr>
                     <tr>
                          <td>pulse</td>
-                         <td><img src='https://image.flaticon.com/icons/png/512/1499/1499840.png' style="animation: pulse 2s infinite linear;"/></td>
+                         <td><img src='https://image.flaticon.com/icons/png/512/1499/1499840.png'
+                                   style="animation: pulse 2s infinite linear;" /></td>
                     </tr>
                     <tr>
                          <td>flip</td>
-                         <td><img src='https://image.flaticon.com/icons/png/512/1499/1499840.png' style="animation: flip 2s infinite linear;"/></td>
+                         <td><img src='https://image.flaticon.com/icons/png/512/1499/1499840.png'
+                                   style="animation: flip 2s infinite linear;" /></td>
                     </tr>
                     <tr>
                          <td>heartBeat</td>
-                         <td><img src='https://image.flaticon.com/icons/png/512/1499/1499840.png' style="animation: heartBeat 2s infinite linear;"/></td>
+                         <td><img src='https://image.flaticon.com/icons/png/512/1499/1499840.png'
+                                   style="animation: heartBeat 2s infinite linear;" /></td>
                     </tr>
                     <tr>
                          <td>float</td>
-                         <td><img src='https://image.flaticon.com/icons/png/512/1499/1499840.png' style="animation: float 2s infinite linear;"/></td>
+                         <td><img src='https://image.flaticon.com/icons/png/512/1499/1499840.png'
+                                   style="animation: float 2s infinite linear;" /></td>
                     </tr>
                     <tr>
                          <td>hang</td>
-                         <td><img src='https://image.flaticon.com/icons/png/512/1499/1499840.png' style="animation: hang 2s infinite linear;"/></td>
+                         <td><img src='https://image.flaticon.com/icons/png/512/1499/1499840.png'
+                                   style="animation: hang 2s infinite linear;" /></td>
                     </tr>
                </tbody>
           </table>
      </div>
 
+     <!-- Modal Structure -->
+     <div id="modal1" class="modal">
+          <div class="modal-content">
+               <h4>Demo</h4>
+               <div class="input-field col s12">
+                    <div class="container">
+                         <div class="row">
+                              <div class="col s4">
+                                   <p>
+                                        <label>
+                                             <input type="checkbox" name="animation" value="evaporate" />
+                                             <span>evaporate</span>
+                                        </label>
+                                   </p>
+                                   <p>
+                                        <label>
+                                             <input type="checkbox" name="animation" value="spin" />
+                                             <span>spin</span>
+                                        </label>
+                                   </p>
+                                   <p>
+                                        <label>
+                                             <input type="checkbox" name="animation" value="flash" />
+                                             <span>flash</span>
+                                        </label>
+                                   </p>
+                                   <p>
+                                        <label>
+                                             <input type="checkbox" name="animation" value="pulse" />
+                                             <span>pulse</span>
+                                        </label>
+                                   </p>
+                                   <p>
+                                        <label>
+                                             <input type="checkbox" name="animation" value="flip" />
+                                             <span>flip</span>
+                                        </label>
+                                   </p>
+                                   <p>
+                                        <label>
+                                             <input type="checkbox" name="animation" value="heartBeat" />
+                                             <span>heartBeat</span>
+                                        </label>
+                                   </p>
+                                   <p>
+                                        <label>
+                                             <input type="checkbox" name="animation" value="float" />
+                                             <span>float</span>
+                                        </label>
+                                   </p>
+                                   <p>
+                                        <label>
+                                             <input type="checkbox" name="animation" value="hang" />
+                                             <span>hang</span>
+                                        </label>
+                                   </p>
+                              </div>
+                              <div class="col s3">
+                                   <form style="margin-top: 12px;" onsubmit="event.preventDefault();">
+                                        <input type="file" accept="image/*" name="image" id="file"
+                                             onchange="loadFile(event)" style="display: none;">
+                                        <label for="file" style="cursor: pointer;">Upload Image</label>
+                                        <button style="margin-top: 5px;" class="btn waves-effect waves-light" id="try" type="button" name="action">Animate
+                                        </button>
+                                   </form>
+                              </div>
+                              <div class="col s3">
+                                   <div>
+                                        <img id="output" />
+                                   </div>
+                              </div>
+                         </div>
+                    </div>
+               </div>
+          </div>
+          <div class="modal-footer">
+               <a href="#!" class="modal-close waves-effect waves-green btn-flat">Done</a>
+          </div>
+     </div>
+     <script>
+          var imageSrc;
+          var loadFile = function (event) {
+               imageSrc = URL.createObjectURL(event.target.files[0]);
+          };
+
+          document.getElementById('try').addEventListener('click', (e) => {
+               e.preventDefault();
+               var image = document.getElementById('output');
+               image.src = imageSrc;
+               image.style = `animation: ${document.querySelector('input[name="animation"]:checked').value} 2s infinite linear;`
+          })
+
+          document.addEventListener('DOMContentLoaded', function () {
+               var elems = document.querySelectorAll('.modal');
+               var instances = M.Modal.init(elems, options);
+          });
+
+          // Or with jQuery
+
+          $(document).ready(function () {
+               $('.modal').modal();
+          });
+
+
+          document.addEventListener('DOMContentLoaded', function () {
+               var elems = document.querySelectorAll('select');
+               var instances = M.FormSelect.init(elems, options);
+          });
+
+          // Or with jQuery
+
+          $(document).ready(function () {
+               $('select').formSelect();
+          });
+
+          $(document).ready(function () {
+               $('input:checkbox').click(function () {
+                    $('input:checkbox').not(this).prop('checked', false);
+               });
+          });
+
+     </script>
 </body>
 
 </html>
