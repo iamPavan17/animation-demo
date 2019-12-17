@@ -97,53 +97,61 @@
                <div class="input-field col s12">
                     <div class="container">
                          <div class="row">
-                              <div class="col s4">
+                              <div class="col s3">
                                    <p>
                                         <label>
-                                             <input type="checkbox" name="animation" value="evaporate" />
+                                             <input type="radio" name="animation" value="evaporate" />
                                              <span>evaporate</span>
                                         </label>
                                    </p>
                                    <p>
                                         <label>
-                                             <input type="checkbox" name="animation" value="spin" />
+                                             <input type="radio" name="animation" value="spin" />
                                              <span>spin</span>
                                         </label>
                                    </p>
                                    <p>
                                         <label>
-                                             <input type="checkbox" name="animation" value="flash" />
+                                             <input type="radio" name="animation" value="flash" />
                                              <span>flash</span>
                                         </label>
                                    </p>
                                    <p>
                                         <label>
-                                             <input type="checkbox" name="animation" value="pulse" />
+                                             <input type="radio" name="animation" value="pulse" />
                                              <span>pulse</span>
                                         </label>
                                    </p>
                                    <p>
                                         <label>
-                                             <input type="checkbox" name="animation" value="flip" />
+                                             <input type="radio" name="animation" value="flip" />
                                              <span>flip</span>
                                         </label>
                                    </p>
                                    <p>
                                         <label>
-                                             <input type="checkbox" name="animation" value="heartBeat" />
+                                             <input type="radio" name="animation" value="heartBeat" />
                                              <span>heartBeat</span>
                                         </label>
                                    </p>
                                    <p>
                                         <label>
-                                             <input type="checkbox" name="animation" value="float" />
+                                             <input type="radio" name="animation" value="float" />
                                              <span>float</span>
                                         </label>
                                    </p>
                                    <p>
                                         <label>
-                                             <input type="checkbox" name="animation" value="hang" />
+                                             <input type="radio" name="animation" value="hang" />
                                              <span>hang</span>
+                                        </label>
+                                   </p>
+                              </div>
+                              <div class="col s3">
+                                   <p>
+                                        <label>
+                                             <input type="checkbox" id="circle" value="circle" />
+                                             <span>Circle</span>
                                         </label>
                                    </p>
                               </div>
@@ -152,7 +160,8 @@
                                         <input type="file" accept="image/*" name="image" id="file"
                                              onchange="loadFile(event)" style="display: none;">
                                         <label for="file" style="cursor: pointer;">Upload Image</label>
-                                        <button style="margin-top: 5px;" class="btn waves-effect waves-light" id="try" type="button" name="action">Animate
+                                        <button style="margin-top: 5px;" class="btn waves-effect waves-light" id="try"
+                                             type="button" name="action">Animate
                                         </button>
                                    </form>
                               </div>
@@ -179,7 +188,9 @@
                e.preventDefault();
                var image = document.getElementById('output');
                image.src = imageSrc;
-               image.style = `animation: ${document.querySelector('input[name="animation"]:checked').value} 2s infinite linear;`
+               isCircle = (document.getElementById('circle').checked ? '50%': '0%');
+
+               image.style = `animation: ${document.querySelector('input[name="animation"]:checked').value} 2s infinite linear; border-radius: ${isCircle}`
           })
 
           document.addEventListener('DOMContentLoaded', function () {
