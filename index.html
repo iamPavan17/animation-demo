@@ -23,20 +23,20 @@
                          <img src="http://i.stack.imgur.com/SBv4T.gif" alt="this slowpoke moves" width=80 />
                     </li> -->
                     <li>
-                         <a href="sass.html"><a class="btn-floating pulse btn modal-trigger" href="#modal1"><i
-                                        class="material-icons">error_outline</i></a>
-                         </a>
+                         <a class="btn-floating cyan pulse btn tooltipped" data-position="bottom" data-tooltip="To copy the code click on animation type.""><i class="material-icons">error_outline</i></a>
                     </li>
                </ul>
           </div>
      </nav>
-     <!-- <div style="position: relative;">
-          <div style="position: absolute; top: 3px; right: 5px;">
-               <img src="https://media1.giphy.com/media/Oq1zCyNdatYbe/giphy.gif?cid=790b76112591ffefeab0ab0df39986a082cde4f93eec38a5&rid=giphy.gif"
-                    style="border-radius: 10%;" width="65px"/>
-          </div>
-     </div> -->
+
      <div class="container">
+
+          <form style="margin-top: 12px;">
+               <input type="file" accept="image/*" name="image" id="file" onchange="loadFile(event)"
+                    style="display: none;">
+               <label for="file" style="cursor: pointer;">Want to try a different image? Click here!!</label>
+          </form>
+          
           <table class="highlight">
                <thead>
                     <tr>
@@ -47,156 +47,78 @@
 
                <tbody>
                     <tr>
-                         <td>evaporate</td>
-                         <td><img src='https://image.flaticon.com/icons/png/512/1499/1499840.png'
-                                   style="animation: evaporate 2s infinite linear;" /></td>
+                         <td onclick="copyToClipboard('#p1')"><a onclick="M.toast({html: 'Code copied for evaporate animation!'})" href="#!">evaporate</a></td>
+                         <td><img id="output" src='https://image.flaticon.com/icons/png/512/1499/1499840.png' style="animation: evaporate 2s infinite linear;" /></td>
+                         <textarea id="p1" style="display: none"><CustomImageLoader image={'https://image.flaticon.com/icons/png/512/1499/1499840.png'} animationType={'evaporate'}/>
+                         </textarea>
                     </tr>
                     <tr>
-                         <td>spin</td>
-                         <td><img src='https://image.flaticon.com/icons/png/512/1499/1499840.png'
-                                   style="animation: spin 2s infinite linear;" /></td>
+                         <td onclick="copyToClipboard('#p2')"><a href="#!" onclick="M.toast({html: 'Code copied for spin animation!'})">spin</a></td>
+                         <td><img id="output" src='https://image.flaticon.com/icons/png/512/1499/1499840.png' style="animation: spin 2s infinite linear;" /></td>
+                         <textarea id="p2" style="display: none"><CustomImageLoader image={'https://image.flaticon.com/icons/png/512/1499/1499840.png'} animationType={'spin'}/>
+                         </textarea>
                     </tr>
                     <tr>
-                         <td>flash</td>
-                         <td><img src='https://image.flaticon.com/icons/png/512/1499/1499840.png'
-                                   style="animation: flash 2s infinite linear;" /></td>
+                         <td onclick="copyToClipboard('#p3')"><a onclick="M.toast({html: 'Code copied for flash animation!'})" href="#!">flash</a></td>
+                         <td><img id="output" src='https://image.flaticon.com/icons/png/512/1499/1499840.png' style="animation: flash 2s infinite linear;" /></td>
+                         <textarea id="p3" style="display: none"><CustomImageLoader image={'https://image.flaticon.com/icons/png/512/1499/1499840.png'} animationType={'flash'}/>
+                         </textarea>
                     </tr>
                     <tr>
-                         <td>pulse</td>
-                         <td><img src='https://image.flaticon.com/icons/png/512/1499/1499840.png'
-                                   style="animation: pulse 2s infinite linear;" /></td>
+                         <td onclick="copyToClipboard('#p4')"><a onclick="M.toast({html: 'Code copied for pulse animation!'})" href="#!">pulse</a></td>
+                         <td><img id="output" src='https://image.flaticon.com/icons/png/512/1499/1499840.png' style="animation: pulse 2s infinite linear;" /></td>
+                         <textarea id="p4" style="display: none"><CustomImageLoader image={'https://image.flaticon.com/icons/png/512/1499/1499840.png'} animationType={'pulse'}/>
+                         </textarea>
                     </tr>
                     <tr>
-                         <td>flip</td>
-                         <td><img src='https://image.flaticon.com/icons/png/512/1499/1499840.png'
-                                   style="animation: flip 2s infinite linear;" /></td>
+                         <td onclick="copyToClipboard('#p5')"><a onclick="M.toast({html: 'Code copied for flip animation!'})" href="#!">flip</a></td>
+                         <td><img id="output" src='https://image.flaticon.com/icons/png/512/1499/1499840.png' style="animation: flip 2s infinite linear;" /></td>
+                         <textarea id="p5" style="display: none"><CustomImageLoader image={'https://image.flaticon.com/icons/png/512/1499/1499840.png'} animationType={'flip'}/>
+                         </textarea>
                     </tr>
                     <tr>
-                         <td>heartBeat</td>
-                         <td><img src='https://image.flaticon.com/icons/png/512/1499/1499840.png'
-                                   style="animation: heartBeat 2s infinite linear;" /></td>
+                         <td onclick="copyToClipboard('#p6')"><a onclick="M.toast({html: 'Code copied for heartBeat animation!'})" href="#!">heartBeat</a></td>
+                         <td><img id="output" src='https://image.flaticon.com/icons/png/512/1499/1499840.png' style="animation: heartBeat 2s infinite linear;" /></td>
+                         <textarea id="p6" style="display: none"><CustomImageLoader image={'https://image.flaticon.com/icons/png/512/1499/1499840.png'} animationType={'heartBeat'}/>
+                         </textarea>
                     </tr>
                     <tr>
-                         <td>float</td>
-                         <td><img src='https://image.flaticon.com/icons/png/512/1499/1499840.png'
-                                   style="animation: float 2s infinite linear;" /></td>
+                         <td onclick="copyToClipboard('#p7')"><a onclick="M.toast({html: 'Code copied for float animation!'})" href="#!">float</a></td>
+                         <td><img id="output" src='https://image.flaticon.com/icons/png/512/1499/1499840.png' style="animation: float 2s infinite linear;" /></td>
+                         <textarea id="p7" style="display: none"><CustomImageLoader image={'https://image.flaticon.com/icons/png/512/1499/1499840.png'} animationType={'float'}/>
+                         </textarea>
                     </tr>
                     <tr>
-                         <td>hang</td>
-                         <td><img src='https://image.flaticon.com/icons/png/512/1499/1499840.png'
-                                   style="animation: hang 2s infinite linear;" /></td>
+                         <td onclick="copyToClipboard('#p8')"><a onclick="M.toast({html: 'Code copied for hang animation!'})" href="#!">hang</a></td>
+                         <td><img id="output" src='https://image.flaticon.com/icons/png/512/1499/1499840.png' style="animation: hang 2s infinite linear;" /></td>
+                         <textarea id="p8" style="display: none"><CustomImageLoader image={'https://image.flaticon.com/icons/png/512/1499/1499840.png'} animationType={'hang'}/>
+                         </textarea>
                     </tr>
                </tbody>
           </table>
      </div>
-
-     <!-- Modal Structure -->
-     <div id="modal1" class="modal">
-          <div class="modal-content">
-               <h4>Demo</h4>
-               <div class="input-field col s12">
-                    <div class="container">
-                         <div class="row">
-                              <div class="col s3">
-                                   <p>
-                                        <label>
-                                             <input type="radio" name="animation" value="evaporate" />
-                                             <span>evaporate</span>
-                                        </label>
-                                   </p>
-                                   <p>
-                                        <label>
-                                             <input type="radio" name="animation" value="spin" />
-                                             <span>spin</span>
-                                        </label>
-                                   </p>
-                                   <p>
-                                        <label>
-                                             <input type="radio" name="animation" value="flash" />
-                                             <span>flash</span>
-                                        </label>
-                                   </p>
-                                   <p>
-                                        <label>
-                                             <input type="radio" name="animation" value="pulse" />
-                                             <span>pulse</span>
-                                        </label>
-                                   </p>
-                                   <p>
-                                        <label>
-                                             <input type="radio" name="animation" value="flip" />
-                                             <span>flip</span>
-                                        </label>
-                                   </p>
-                                   <p>
-                                        <label>
-                                             <input type="radio" name="animation" value="heartBeat" />
-                                             <span>heartBeat</span>
-                                        </label>
-                                   </p>
-                                   <p>
-                                        <label>
-                                             <input type="radio" name="animation" value="float" />
-                                             <span>float</span>
-                                        </label>
-                                   </p>
-                                   <p>
-                                        <label>
-                                             <input type="radio" name="animation" value="hang" />
-                                             <span>hang</span>
-                                        </label>
-                                   </p>
-                              </div>
-                              <div class="col s3">
-                                   <p>
-                                        <label>
-                                             <input type="checkbox" id="circle" value="circle" />
-                                             <span>Circle</span>
-                                        </label>
-                                   </p>
-                              </div>
-                              <div class="col s3">
-                                   <form style="margin-top: 12px;" onsubmit="event.preventDefault();">
-                                        <input type="file" accept="image/*" name="image" id="file"
-                                             onchange="loadFile(event)" style="display: none;">
-                                        <label for="file" style="cursor: pointer;">Upload Image</label>
-                                        <button style="margin-top: 5px;" class="btn waves-effect waves-light" id="try"
-                                             type="button" name="action">Animate
-                                        </button>
-                                   </form>
-                              </div>
-                              <div class="col s3">
-                                   <div>
-                                        <img id="output" />
-                                   </div>
-                              </div>
-                         </div>
-                    </div>
-               </div>
-          </div>
-          <div class="modal-footer">
-               <a href="#!" class="modal-close waves-effect waves-green btn-flat">Done</a>
-          </div>
-     </div>
      <script>
           var imageSrc;
           var loadFile = function (event) {
-               imageSrc = URL.createObjectURL(event.target.files[0]);
+               var images = document.querySelectorAll("[id='output']");
+               images.forEach(image => {
+                    image.src = URL.createObjectURL(event.target.files[0]);
+               })
           };
 
-          document.getElementById('try').addEventListener('click', (e) => {
-               e.preventDefault();
-               var image = document.getElementById('output');
-               image.src = imageSrc;
-               isCircle = (document.getElementById('circle').checked ? '50%': '0%');
+          // document.getElementById('try').addEventListener('click', (e) => {
+          //      e.preventDefault();
+          //      var image = document.getElementById('output');
+          //      image.src = imageSrc;
+          //      isCircle = (document.getElementById('circle').checked ? '50%' : '0%');
 
-               image.style = `animation: ${document.querySelector('input[name="animation"]:checked').value} 2s infinite linear; border-radius: ${isCircle}`
-          })
+          //      image.style = `animation: ${document.querySelector('input[name="animation"]:checked').value} 2s infinite linear; border-radius: ${isCircle}`
+          // })
 
-          document.addEventListener('DOMContentLoaded', function () {
-               var elems = document.querySelectorAll('.modal');
-               var instances = M.Modal.init(elems, options);
-          });
+          // document.addEventListener('DOMContentLoaded', function () {
+          //      var elems = document.querySelectorAll('.modal');
+          //      var instances = M.Modal.init(elems, options);
+          // });
 
           // Or with jQuery
 
@@ -205,10 +127,10 @@
           });
 
 
-          document.addEventListener('DOMContentLoaded', function () {
-               var elems = document.querySelectorAll('select');
-               var instances = M.FormSelect.init(elems, options);
-          });
+          // document.addEventListener('DOMContentLoaded', function () {
+          //      var elems = document.querySelectorAll('select');
+          //      var instances = M.FormSelect.init(elems, options);
+          // });
 
           // Or with jQuery
 
@@ -222,6 +144,17 @@
                });
           });
 
+          function copyToClipboard(element) {
+               var $temp = $("<input>");
+               $("body").append($temp);
+               $temp.val($(element).text()).select();
+               document.execCommand("copy");
+               $temp.remove();
+          }
+
+          $(document).ready(function(){
+               $('.tooltipped').tooltip();
+          });
      </script>
 </body>
 
