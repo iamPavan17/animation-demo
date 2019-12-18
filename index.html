@@ -23,7 +23,7 @@
                          <img src="http://i.stack.imgur.com/SBv4T.gif" alt="this slowpoke moves" width=80 />
                     </li> -->
                     <li>
-                         <a class="btn-floating cyan pulse btn tooltipped" data-position="bottom" data-tooltip="To copy the code click on animation type.""><i class="material-icons">error_outline</i></a>
+                         <a class="btn-floating cyan pulse btn tooltipped" data-position="bottom" data-tooltip="To copy the code click on respective code icon.""><i class="material-icons">error_outline</i></a>
                     </li>
                </ul>
           </div>
@@ -34,7 +34,7 @@
           <form style="margin-top: 12px;">
                <input type="file" accept="image/*" name="image" id="file" onchange="loadFile(event)"
                     style="display: none;">
-               <label for="file" style="cursor: pointer;">Want to try a different image? Click here!!</label>
+               <label for="file" style="cursor: pointer;"><a style="font-size: 14px;"><i>Click here to try with different image!</i></a></label>
           </form>
           
           <table class="highlight">
@@ -47,52 +47,60 @@
 
                <tbody>
                     <tr>
-                         <td onclick="copyToClipboard('#p1')"><a onclick="M.toast({html: 'Code copied for evaporate animation!'})" href="#!">evaporate</a></td>
+                         <td>evaporate</td>
                          <td><img id="output" src='https://image.flaticon.com/icons/png/512/1499/1499840.png' style="animation: evaporate 2s infinite linear;" /></td>
                          <textarea id="p1" style="display: none"><CustomImageLoader image={'https://image.flaticon.com/icons/png/512/1499/1499840.png'} animationType={'evaporate'}/>
                          </textarea>
+                         <td onclick="copyToClipboard('#p1')"><a onclick="M.toast({html: 'Code copied for evaporate animation!'})" href="#!"><i class="material-icons">code</i></a></td>
                     </tr>
                     <tr>
-                         <td onclick="copyToClipboard('#p2')"><a href="#!" onclick="M.toast({html: 'Code copied for spin animation!'})">spin</a></td>
+                         <td>spin</td>
                          <td><img id="output" src='https://image.flaticon.com/icons/png/512/1499/1499840.png' style="animation: spin 2s infinite linear;" /></td>
                          <textarea id="p2" style="display: none"><CustomImageLoader image={'https://image.flaticon.com/icons/png/512/1499/1499840.png'} animationType={'spin'}/>
                          </textarea>
+                         <td onclick="copyToClipboard('#p2')"><a href="#!" onclick="M.toast({html: 'Code copied for spin animation!'})"><i class="material-icons">code</i></a></td>
                     </tr>
                     <tr>
-                         <td onclick="copyToClipboard('#p3')"><a onclick="M.toast({html: 'Code copied for flash animation!'})" href="#!">flash</a></td>
+                         <td>flash</td>
                          <td><img id="output" src='https://image.flaticon.com/icons/png/512/1499/1499840.png' style="animation: flash 2s infinite linear;" /></td>
                          <textarea id="p3" style="display: none"><CustomImageLoader image={'https://image.flaticon.com/icons/png/512/1499/1499840.png'} animationType={'flash'}/>
                          </textarea>
+                         <td onclick="copyToClipboard('#p3')"><a onclick="M.toast({html: 'Code copied for flash animation!'})" href="#!"><i class="material-icons">code</i></a></td>
                     </tr>
                     <tr>
-                         <td onclick="copyToClipboard('#p4')"><a onclick="M.toast({html: 'Code copied for pulse animation!'})" href="#!">pulse</a></td>
+                         <td>pulse</td>
                          <td><img id="output" src='https://image.flaticon.com/icons/png/512/1499/1499840.png' style="animation: pulse 2s infinite linear;" /></td>
                          <textarea id="p4" style="display: none"><CustomImageLoader image={'https://image.flaticon.com/icons/png/512/1499/1499840.png'} animationType={'pulse'}/>
                          </textarea>
+                         <td onclick="copyToClipboard('#p4')"><a onclick="M.toast({html: 'Code copied for pulse animation!'})" href="#!"><i class="material-icons">code</i></a></td>
                     </tr>
                     <tr>
-                         <td onclick="copyToClipboard('#p5')"><a onclick="M.toast({html: 'Code copied for flip animation!'})" href="#!">flip</a></td>
+                         <td>flip</td>
                          <td><img id="output" src='https://image.flaticon.com/icons/png/512/1499/1499840.png' style="animation: flip 2s infinite linear;" /></td>
                          <textarea id="p5" style="display: none"><CustomImageLoader image={'https://image.flaticon.com/icons/png/512/1499/1499840.png'} animationType={'flip'}/>
                          </textarea>
+                         <td onclick="copyToClipboard('#p5')"><a onclick="M.toast({html: 'Code copied for flip animation!'})" href="#!"><i class="material-icons">code</i></a></td>
                     </tr>
                     <tr>
-                         <td onclick="copyToClipboard('#p6')"><a onclick="M.toast({html: 'Code copied for heartBeat animation!'})" href="#!">heartBeat</a></td>
+                         <td >heartBeat</td>
                          <td><img id="output" src='https://image.flaticon.com/icons/png/512/1499/1499840.png' style="animation: heartBeat 2s infinite linear;" /></td>
                          <textarea id="p6" style="display: none"><CustomImageLoader image={'https://image.flaticon.com/icons/png/512/1499/1499840.png'} animationType={'heartBeat'}/>
                          </textarea>
+                         <td onclick="copyToClipboard('#p6')"><a onclick="M.toast({html: 'Code copied for heartBeat animation!'})" href="#!"><i class="material-icons">code</i></a></td>
                     </tr>
                     <tr>
-                         <td onclick="copyToClipboard('#p7')"><a onclick="M.toast({html: 'Code copied for float animation!'})" href="#!">float</a></td>
+                         <td >float</td>
                          <td><img id="output" src='https://image.flaticon.com/icons/png/512/1499/1499840.png' style="animation: float 2s infinite linear;" /></td>
                          <textarea id="p7" style="display: none"><CustomImageLoader image={'https://image.flaticon.com/icons/png/512/1499/1499840.png'} animationType={'float'}/>
                          </textarea>
+                         <td onclick="copyToClipboard('#p7')"><a onclick="M.toast({html: 'Code copied for float animation!'})" href="#!"><i class="material-icons">code</i></a></td>
                     </tr>
                     <tr>
-                         <td onclick="copyToClipboard('#p8')"><a onclick="M.toast({html: 'Code copied for hang animation!'})" href="#!">hang</a></td>
+                         <td >hang</td>
                          <td><img id="output" src='https://image.flaticon.com/icons/png/512/1499/1499840.png' style="animation: hang 2s infinite linear;" /></td>
                          <textarea id="p8" style="display: none"><CustomImageLoader image={'https://image.flaticon.com/icons/png/512/1499/1499840.png'} animationType={'hang'}/>
                          </textarea>
+                         <td onclick="copyToClipboard('#p8')"><a onclick="M.toast({html: 'Code copied for hang animation!'})" href="#!"><i class="material-icons">code</i></a></td>
                     </tr>
                </tbody>
           </table>
